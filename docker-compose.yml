@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  secure-terminal:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: secure-terminal:latest
+    container_name: secure-terminal
+    restart: unless-stopped
+    ports:
+      - "443:443"
+      - "80:80"
+    volumes:
+      - apache_logs:/var/log/apache2
+      - apache_certs:/etc/apache2/ssl
+    environment:
+      - TZ=Europe/Paris
+
+volumes:
+  apache_logs:
+    driver: local
+  apache_certs:
+    driver: local 
