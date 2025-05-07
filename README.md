@@ -19,7 +19,7 @@ Ce projet propose un terminal web sécurisé basé sur [ttyd](https://github.com
 
 1. Cloner ce dépôt:
    ```bash
-   git clone https://github.com/votre-utilisateur/secure-web-terminal.git
+   git clone https://github.com/randomKara/secure-web-terminal.git
    cd secure-web-terminal
    ```
 
